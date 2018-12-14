@@ -18,7 +18,10 @@ ZSH_THEME="amuse"
 
 DEFAULT_USER="nikhil"
 prompt_context(){}
+
+# Fixes latency when entering 'NORMAL' mode in vi-mode
 KEYTIMEOUT=1
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -72,9 +75,8 @@ plugins=(
   git
   zsh-nvm
   vi-mode
-  osx
-  python
-  zsh-completions
+  # osx
+  # zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
