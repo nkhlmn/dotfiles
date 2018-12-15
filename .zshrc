@@ -13,8 +13,11 @@ export ZSH=/Users/nikhil/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="agnoster-nk"
+# ZSH_THEME="muse"
 ZSH_THEME="amuse"
 # ZSH_THEME="random"
+# ZSH_THEME="robbyrussell"
+# ZSH_THEME="crunch"
 
 DEFAULT_USER="nikhil"
 prompt_context(){}
@@ -67,12 +70,16 @@ COMPLETION_WAITING_DOTS="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Improve shell startup time by lazy loading NVM
+# https://github.com/lukechilds/zsh-nvm
+export NVM_LAZY_LOAD=true
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+  gitfast
   zsh-nvm
   vi-mode
   # osx
@@ -106,18 +113,15 @@ export EDITOR='vim'
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
 alias zshconfig="vi ~/.zshrc"
 alias ohmyzsh="vi ~/.oh-my-zsh"
 
-alias gv="mvim -v"
 alias nv="nvim"
 alias chrome="open -a 'Google Chrome'"
+alias safari="open -a 'Safari'"
 alias python="python3"
 alias gcc="gcc-8"
 alias g++="g++-8"
-alias herd="python3 ~/programming/git-herd/git-herd.py"
 alias tr="tree -L 1 -C -D -a -h -F"
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
