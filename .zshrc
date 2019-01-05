@@ -7,6 +7,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+<<<<<<< HEAD
 # export ZSH=/Users/nikhil/.oh-my-zsh
 
 # active antigen (plugin manger for zsh)
