@@ -109,29 +109,11 @@ export EDITOR='vim'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-alias zshconfig="vi ~/.zshrc"
-alias ohmyzsh="vi ~/.oh-my-zsh"
-
-alias nv="nvim"
-alias chrome="open -a 'Google Chrome'"
-alias safari="open -a 'Safari'"
-alias python="python3"
-alias gcc="gcc-8"
-alias g++="g++-8"
-alias tr="tree -L 1 -C -D -a -h -F"
+# use the 'gi' command to generate .gitignore files
+# e.g. `$ gi vim,macos >> .gitignore`
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# export WORKON_HOME=$HOME/Envs
-# export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-
-# source /usr/local/bin/virtualenvwrapper.sh
 
 export PATH=/usr/local/sbin:$PATH
 
@@ -139,5 +121,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export HOMEBREW_NO_ANALYTICS=1
 
+# Activate fzf (fuzzy finder)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
+
+# source aliases from ~/.aliases
+source $HOME/.aliases
