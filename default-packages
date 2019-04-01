@@ -3,8 +3,10 @@ eslint-config-prettier
 eslint-plugin-node
 eslint-plugin-prettier
 eslint-plugin-react
+eslint-plugin-react-hooks
+jsonlint
 less
 neovim
 nodemon
 prettier
-tern
+stylelint

@@ -5,7 +5,7 @@
     "node": true,
     "jest": true
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["prettier", "react", "react-hooks"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -15,7 +15,6 @@
   ],
   "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -25,6 +24,11 @@
     "indent": ["off"],
     "react/jsx-uses-vars": "error",
     "prettier/prettier": "error",
-    "react/jsx-indent": ["warn", 2]
+    "react/jsx-indent": ["warn", 2],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
