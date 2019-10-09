@@ -27,8 +27,5 @@
     "react/jsx-indent": ["warn", 2],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
-  },
-  "engines": {
-    "node": ">=8.0.0"
   }
 }

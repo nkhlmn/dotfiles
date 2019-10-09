@@ -98,7 +98,7 @@ COMPLETION_WAITING_DOTS="true"
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR='nvim'
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
