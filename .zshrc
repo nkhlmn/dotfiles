@@ -16,23 +16,12 @@ antigen use oh-my-zsh
 
 antigen bundle gitfast
 antigen bundle vi-mode
-# antigen bundle heroku
-# antigen bundle pip
-
-
-# Improve shell startup time by lazy loading NVM
-# https://github.com/lukechilds/zsh-nvm
-export NVM_LAZY_LOAD=true
-antigen bundle lukechilds/zsh-nvm
-
 antigen bundle zsh-users/zsh-syntax-highlighting
-
-antigen theme amuse
+antigen bundle zsh-users/zsh-autosuggestions
 
 antigen apply
 
 DEFAULT_USER="nikhil"
-prompt_context(){}
 
 # Fixes latency when entering 'NORMAL' mode in vi-mode
 KEYTIMEOUT=1
@@ -98,7 +87,7 @@ COMPLETION_WAITING_DOTS="true"
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -113,8 +102,6 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH=/usr/local/sbin:$PATH
-
-# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -150,3 +137,9 @@ function zle-line-finish
 zle -N zle-line-init
 zle -N zle-line-finish
 zle -N zle-keymap-select
+
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+source <(navi widget zsh)
+
+eval "$(starship init zsh)"
