@@ -1,16 +1,33 @@
-alias nv="nvim"
-alias nvimrc="nv ~/.config/nvim/init.vim"
-alias nvrc="nv ~/.config/nvim/init.vim"
-alias vimrc="vi ~/.vimrc"
-alias virc="vi ~/.vimrc"
+alias l="exa -laB --icons --git"
+alias t="exa --tree --level=4 --icons --git --git-ignore"
+
+alias man="tldr"
+
+alias top="ytop"
+
 alias zshrc="nvim ~/.zshrc"
-alias ohmyzsh="vi ~/.oh-my-zsh"
+
+alias nv="nvim"
+alias nrc="nvim ~/.config/nvim/init.vim"
+alias nvrc="nvim ~/.config/nvim/init.vim"
+alias nvimrc="nvim ~/.config/nvim/init.vim"
+
+alias vrc="vi ~/.vimrc"
+alias virc="vi ~/.vimrc"
+alias vimrc="vi ~/.vimrc"
+
+alias krc="nv ~/.config/kitty/kitty.conf" 
+alias kittyrc="nv ~/.config/kitty/kitty.conf" 
+alias d="kitty +kitten diff"
+
 alias chrome="open -a 'Google Chrome'"
 alias safari="open -a 'Safari'"
 alias firefox="open -a 'Firefox'"
+
 alias python="python3"
-alias gcc="gcc-8"
-alias g++="g++-8"
 alias tr="tree -L 1 -C -D -a -h -F"
 alias gs="git status"
+
 alias do-login="TERM=xterm-256color ssh root@138.68.19.124"
+
+alias cat=bat
