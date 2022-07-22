@@ -35,6 +35,7 @@ alias cat=bat
 
 alias g="git"
 alias ga="git add"
+alias gc="git commit"
 alias gs="git status"
 alias gst="git status"
 alias gd="git diff"
