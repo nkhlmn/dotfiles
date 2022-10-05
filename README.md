@@ -3,9 +3,9 @@
 `git clone git@github.com:nkhlmn/dotfiles.git ~/dotfiles`
 
 
-`ln -s ~/dotfiles/.zshrc ~/.zshrc`
+`ln -s ~/dotfiles/zshrc ~/.zshrc`
 
-`ln -s ~/dotfiles/.aliases ~/.aliases`
+`ln -s ~/dotfiles/aliases ~/.aliases`
 
 `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
 
