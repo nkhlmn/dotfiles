@@ -118,7 +118,7 @@ font:
     style: ExtraLight Italic
   bold_italic:
     style: Medium Italic
-  size: 20.0
+  size: 18.0
 
   # normal:
   #   family: VictorMono Nerd Font Mono
