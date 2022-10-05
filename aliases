@@ -1,9 +1,8 @@
 alias als="nv ~/.aliases"
 
 alias nrc="nv -c 'cd ~/.config/nvim/' ~/.config/nvim/init.lua"
-alias krc="nv -c 'cd ~/.config/kitty/' ~/.config/kitty/kitty.conf"
 alias arc="nv -c 'cd ~/.config/alacritty/' ~/.config/alacritty/alacritty.yml"
-alias trc="nv ~/.config/tmux/tmux.conf"
+alias trc="nv ~/.tmux.conf"
 alias wrc="nv ~/.wezterm.lua"
 alias vrc="vi ~/.vimrc"
 alias zrc="nv ~/.zshrc"
