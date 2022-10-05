@@ -1,4 +1,12 @@
-alias als="nvim -c 'cd ~/dotfiles' ~/dotfiles/.aliases"
+alias als="nv ~/.aliases"
+
+alias nrc="nv -c 'cd ~/.config/nvim/' ~/.config/nvim/init.lua"
+alias krc="nv -c 'cd ~/.config/kitty/' ~/.config/kitty/kitty.conf"
+alias arc="nv -c 'cd ~/.config/alacritty/' ~/.config/alacritty/alacritty.yml"
+alias trc="nv ~/.config/tmux/tmux.conf"
+alias wrc="nv ~/.wezterm.lua"
+alias vrc="vi ~/.vimrc"
+alias zrc="nv ~/.zshrc"
 
 alias l="exa -a --icons --git --group-directories-first --oneline"
 alias ls="exa -laB --icons --git --group-directories-first"
@@ -9,27 +17,13 @@ alias mant="tldr"
 
 alias top="btm"
 
-alias zrc="nvim ~/.zshrc"
-alias zshrc="nvim ~/.zshrc"
 alias soz="source ~/.zshrc && echo 'Sourced .zshrc'"
 
 alias nv="nvim"
-alias nrc="nvim -c 'cd ~/.config/nvim/' ~/.config/nvim/init.lua"
-alias nvrc="nvim -c 'cd ~/.config/nvim/' ~/.config/nvim/init.lua"
-alias nvimrc="nvim -c 'cd ~/.config/nvim/' ~/.config/nvim/init.lua"
 alias nvps="nvim -c PackerSync"
 alias cnv="cd ~/.config/nvim"
 
-alias vrc="vi ~/.vimrc"
-alias virc="vi ~/.vimrc"
-alias vimrc="vi ~/.vimrc"
-
-alias krc="nv -c 'cd ~/.config/kitty/' ~/.config/kitty/kitty.conf"
-alias arc="nv -c 'cd ~/.config/alacritty/' ~/.config/alacritty/alacritty.yml"
-
 alias python="python3"
-
-alias do-login="TERM=xterm-256color ssh root@138.68.19.124"
 
 alias cat=bat
 
@@ -45,9 +39,8 @@ alias gl="git log"
 alias glo="git log"
 alias lg="lazygit"
 
-alias tm="tmux"
+alias tm="tmux attach || tmux"
 alias tmn="tmux new"
 alias tma="tmux attach"
 alias tmk="tmux kill-server"
 alias tmks="tmux kill-server"
-alias trc="nv -c 'cd ~/.config/tmux/' ~/.config/tmux/tmux.conf"
