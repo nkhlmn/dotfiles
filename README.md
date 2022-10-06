@@ -12,3 +12,5 @@
 `ln -s ~/dotfiles/wezterm/wezterm.lua ~/.wezterm.lua`
 
 `ln -s ~/dotfiles/alacritty ~/.config/alacritty`
+
+`ln -s ~/dotfiles/phoenix ~/.config/phoenix`
