@@ -39,6 +39,8 @@ alias glo="git log"
 alias lg="lazygit"
 
 alias tm="tmux attach || tmux"
+alias tmx="tmux attach || tmux"
+alias tmux="tmux attach || tmux"
 alias tmn="tmux new"
 alias tma="tmux attach"
 alias tmk="tmux kill-server"
