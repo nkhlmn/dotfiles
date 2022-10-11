@@ -9,7 +9,7 @@
 
 `ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf`
 
-`ln -s ~/dotfiles/wezterm/wezterm.lua ~/.wezterm.lua`
+`ln -s ~/dotfiles/wezterm ~/.config/wezterm`
 
 `ln -s ~/dotfiles/alacritty ~/.config/alacritty`
 
