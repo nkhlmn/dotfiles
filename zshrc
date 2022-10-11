@@ -1,6 +1,7 @@
 bindkey -v # vim keybindings
 
 [ -f ~/.aliases ] && source ~/.aliases
+[ -f ~/.aliases.local ] && source ~/.aliases.local
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # [ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
