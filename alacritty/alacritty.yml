@@ -9,7 +9,8 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
- - ~/.config/alacritty/gruvbox-material-alacritty.yml
+ # - ~/.config/alacritty/gruvbox-material-alacritty.yml
+ - ~/.config/alacritty/kanagawa-alacritty.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -111,13 +112,13 @@ window:
 font:
   normal:
     family: Iosevka Nerd Font Mono
-    style: Extralight
-  bold:
-    style: Medium
-  italic:
-    style: ExtraLight Italic
-  bold_italic:
-    style: Medium Italic
+    # style: Extralight
+  # bold:
+  #   style: Medium
+  # italic:
+  #   style: ExtraLight Italic
+  # bold_italic:
+  #   style: Medium Italic
   size: 18.0
 
   # normal:
