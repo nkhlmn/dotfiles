@@ -112,7 +112,7 @@ window:
 font:
   normal:
     family: Iosevka Nerd Font Mono
-    # style: Extralight
+    style: Extralight
   # bold:
   #   style: Medium
   # italic:
