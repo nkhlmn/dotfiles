@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 return {
-	font = wezterm.font("Iosevka Nerd Font Mono", { weight = "Light" }),
+	font = wezterm.font("Iosevka Nerd Font Mono", { weight = "ExtraLight" }),
 	font_size = 18.0,
 	window_decorations = "RESIZE",
 	hide_tab_bar_if_only_one_tab = true,
