@@ -9,8 +9,8 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
- # - ~/.config/alacritty/gruvbox-material-alacritty.yml
- - ~/.config/alacritty/kanagawa-alacritty.yml
+ - ~/.config/alacritty/gruvbox-material-alacritty.yml
+ # - ~/.config/alacritty/kanagawa-alacritty.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -121,28 +121,16 @@ font:
   # bold_italic:
   #   style: Medium Italic
 
-  # normal:
-  #     family: VictorMono Nerd Font Mono
-      # family: Source Code Pro
-      # style: Light
-  # bold:
-  #   style: SemiBold
-  # italic:
-    # style: Light Oblique
-  # bold_italic:
-  #   style: Medium Italic
-
-  size: 16.0
+  size: 17.5
   normal:
-    family: JetBrainsMono Nerd Font Mono
-    style: Thin
-  italic:
-    style: Thin Italic
+      family: VictorMono Nerd Font Mono
+      style: Light
   bold:
-    style: SemiBold 
+    style: SemiBold
+  italic:
+    style: Light Oblique
   bold_italic:
-    style: SemiBold Italic
-  # size: 18.0
+    style: SemiBold Oblique
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
