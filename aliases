@@ -18,7 +18,7 @@ alias top="btm"
 alias soz="source ~/.zshrc && echo 'Sourced .zshrc'"
 
 alias nv="nvim"
-alias nvps="nvim -c PackerSync"
+alias nvls="nvim -c \"lua require('lazy').sync()\""
 alias cnv="cd ~/.config/nvim"
 
 alias python="python3"
