@@ -6,11 +6,11 @@ bindkey -v # vim keybindings
 source $(brew --prefix)/opt/sk/share/zsh/site-functions/key-bindings.zsh
 source $(brew --prefix)/opt/sk/share/zsh/site-functions/completion.zsh
 
-source $(brew --prefix)/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
 export HOMEBREW_NO_ANALYTICS=1
 export EDITOR='nvim'
 COMPLETION_WAITING_DOTS="true"
 KEYTIMEOUT=1
 
 eval "$(starship init zsh)"
+
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
