@@ -1,4 +1,5 @@
 alias als="nv ~/.aliases"
+alias dfs="cd ~/dotfiles"
 
 alias nrc="nv -c 'cd ~/.config/nvim/' ~/.config/nvim/init.lua"
 alias arc="nv -c 'cd ~/.config/alacritty/' ~/.config/alacritty/alacritty.yml"
