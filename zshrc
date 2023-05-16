@@ -1,5 +1,3 @@
-bindkey -v # vim keybindings
-
 [ -f ~/.aliases ] && source ~/.aliases
 [ -f ~/.aliases.local ] && source ~/.aliases.local
 
@@ -12,5 +10,7 @@ COMPLETION_WAITING_DOTS="true"
 KEYTIMEOUT=1
 
 eval "$(starship init zsh)"
+
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
