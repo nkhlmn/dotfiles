@@ -122,16 +122,27 @@ font:
   # bold_italic:
   #   style: Medium Italic
 
-  size: 17.5
+  size: 15
   normal:
-      family: VictorMono Nerd Font Mono
-      style: Light
+      family: JetBrainsMono Nerd Font Mono
+      style: Thin
   bold:
     style: SemiBold
   italic:
-    style: Light Oblique
+    style: Thin Italic
   bold_italic:
-    style: SemiBold Oblique
+    style: SemiBold Italic
+
+  # size: 16
+  # normal:
+  #     family: VictorMono Nerd Font Mono
+  #     style: Light
+  # bold:
+  #   style: SemiBold
+  # italic:
+  #   style: Light Oblique
+  # bold_italic:
+  #   style: SemiBold Oblique
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
