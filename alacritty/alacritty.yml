@@ -9,9 +9,10 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
- - ~/.config/alacritty/gruvbox-material-alacritty.yml
+ # - ~/.config/alacritty/gruvbox-material-alacritty.yml
  # - ~/.config/alacritty/kanagawa-alacritty.yml
  # - ~/.config/alacritty/kanagawa-dragon-alacritty.yml
+ - ~/.config/alacritty/rose-pine-alacritty.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
