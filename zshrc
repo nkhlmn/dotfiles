@@ -1,11 +1,6 @@
 [ -f ~/.aliases ] && source ~/.aliases
 [ -f ~/.aliases.local ] && source ~/.aliases.local
 
-export HOMEBREW_NO_ANALYTICS=1
-export EDITOR='nvim'
-COMPLETION_WAITING_DOTS="true"
-KEYTIMEOUT=1
-
 eval "$(starship init zsh)"
 
 if type brew &>/dev/null; then
