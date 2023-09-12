@@ -11,7 +11,11 @@ if type brew &>/dev/null; then
 
   source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
   source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  source $(brew --prefix)/opt/sk/share/zsh/site-functions/key-bindings.zsh
-  source $(brew --prefix)/opt/sk/share/zsh/site-functions/completion.zsh
+
+  # The plugin will auto execute this zvm_after_init function
+  function zvm_after_init() {
+    source $(brew --prefix)/opt/sk/share/zsh/site-functions/key-bindings.zsh
+    source $(brew --prefix)/opt/sk/share/zsh/site-functions/completion.zsh
+  }
 fi
 
