@@ -7,9 +7,9 @@ alias trc="nv ~/.tmux.conf"
 alias wrc="nv ~/.config/wezterm/wezterm.lua"
 alias zrc="nv ~/.zshrc"
 
-alias l="exa -a --icons --git --group-directories-first --oneline"
-alias ls="exa -laB --icons --git --group-directories-first"
-alias lt="exa --tree --level=2 --icons --git --git-ignore"
+alias l="exa -a --git --group-directories-first --oneline"
+alias ls="exa -laB --git --group-directories-first"
+alias lt="exa --tree --level=2 --git --git-ignore"
 
 alias tman="tldr"
 alias mant="tldr"
