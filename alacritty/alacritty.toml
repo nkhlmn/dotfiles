@@ -1,0 +1,20 @@
+import = ["/Users/nkhl/.config/alacritty/kanagawa-alacritty.toml"]
+
+[font]
+size = 16.0
+
+[font.normal]
+family = "Iosevka"
+style = "Extralight"
+
+[font.bold]
+style = "Medium"
+
+[font.bold_italic]
+style = "Medium Oblique"
+
+[font.italic]
+style = "Extralight Oblique"
+
+[window]
+decorations = "None"
