@@ -8,10 +8,9 @@ wezterm.on('update-status', function(window, pane)
 end)
 
 return {
-  font = wezterm.font("Iosevka"),
-  -- font = wezterm.font("Iosevka", { weight = "Light" }),
-  font_size = 18.0,
-  command_palette_font_size = 16.0,
+  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
+  font_size = 16.0,
+  command_palette_font_size = 15.0,
   command_palette_bg_color = "Black",
   command_palette_fg_color = "#dcd7ba",
   window_decorations = "RESIZE",
@@ -20,6 +19,6 @@ return {
   audible_bell = "Disabled",
   force_reverse_video_cursor = true,
   color_scheme = "Kanagawa (Gogh)",
-  leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 },
+  leader = { key = 'q', mods = 'CTRL', timeout_milliseconds = 1000 },
   keys = require("keys"),
 }

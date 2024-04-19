@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local action = wezterm.action
 return {
   -- Open launcers
-  { key = 'l', mods = 'CTRL|SHIFT', action = wezterm.action.ShowLauncherArgs { flags = 'FUZZY|COMMANDS'} },
+  { key = 'l', mods = 'CTRL|SHIFT', action = wezterm.action.ShowLauncherArgs { flags = 'FUZZY|COMMANDS' } },
   {
     key = 'K',
     mods = 'CTRL|SHIFT',
@@ -123,5 +123,12 @@ return {
     key = 'j',
     mods = 'LEADER|CTRL',
     action = action.ActivatePaneDirection 'Down',
+  },
+
+  -- Zoom pane
+  {
+    key = 'z',
+    mods = 'LEADER|CTRL',
+    action = action.TogglePaneZoomState,
   },
 }
