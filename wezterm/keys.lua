@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 local action = wezterm.action
+local action_callback = wezterm.action_callback
 return {
   -- Open launcers
   { key = 'l', mods = 'CTRL|SHIFT', action = wezterm.action.ShowLauncherArgs { flags = 'FUZZY|COMMANDS' } },
@@ -130,5 +131,20 @@ return {
     key = 'z',
     mods = 'LEADER|CTRL',
     action = action.TogglePaneZoomState,
+  },
+
+  -- Close all other panes
+  {
+    key = 'o',
+    mods = 'LEADER|CTRL',
+    action = action_callback(function(win, pane)
+      local tab = win:active_tab()
+      for _, p in ipairs(tab:panes()) do
+        if p:pane_id() ~= pane:pane_id() then
+          p:activate()
+          win:perform_action(action.CloseCurrentPane { confirm = false }, p)
+        end
+      end
+    end),
   },
 }
