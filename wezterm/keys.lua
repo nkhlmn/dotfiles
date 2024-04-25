@@ -126,13 +126,6 @@ return {
     action = action.ActivatePaneDirection 'Down',
   },
 
-  -- Zoom pane
-  {
-    key = 'z',
-    mods = 'LEADER|CTRL',
-    action = action.TogglePaneZoomState,
-  },
-
   -- Close all other panes
   {
     key = 'o',
@@ -146,5 +139,24 @@ return {
         end
       end
     end),
+  },
+
+  -- Zoom pane
+  {
+    key = 'z',
+    mods = 'LEADER|CTRL',
+    action = action.TogglePaneZoomState,
+  },
+
+  -- Scroll
+  {
+    key = 'UpArrow',
+    mods = 'CTRL|SHIFT',
+    action = action.ScrollByPage(-0.5)
+  },
+  {
+    key = 'DownArrow',
+    mods = 'CTRL|SHIFT',
+    action = action.ScrollByPage(0.5)
   },
 }

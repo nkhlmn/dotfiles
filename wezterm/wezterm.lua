@@ -1,11 +1,5 @@
-local wezterm = require("wezterm")
-
-wezterm.on('update-status', function(window, pane)
-  window:set_left_status(wezterm.format {
-    { Attribute = { Intensity = 'Bold' } },
-    { Text = ' ' .. wezterm.mux.get_active_workspace() .. ' ' },
-  })
-end)
+local wezterm = require('wezterm')
+require('events')
 
 return {
   -- font = wezterm.font("Iosevka"),
@@ -23,4 +17,5 @@ return {
   color_scheme = "Kanagawa (Gogh)",
   leader = { key = 'q', mods = 'CTRL', timeout_milliseconds = 1000 },
   keys = require("keys"),
+  enable_scroll_bar = true,
 }
