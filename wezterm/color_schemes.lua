@@ -33,9 +33,20 @@ return {
     selection_fg = "#c8c093",
     selection_bg = "#2d4f67",
     scrollbar_thumb = "#16161d",
-    split = "#16161d",
+    split = "#333333",
     ansi = { "#0d0c0c", "#c4746e", "#8a9a7b", "#c4b28a", "#8ba4b0", "#a292a3", "#8ea4a2", "#C8C093" },
     brights = { "#a6a69c", "#E46876", "#87a987", "#E6C384", "#7FB4CA", "#938AA9", "#7aa89f", "#dcd7ba" },
     indexed = { [16] = "#b6927b", [17] = "#b98d7b" },
   },
+  ["nordic"] = {
+    foreground    = "#D8DEE9",
+    background    = "#242933",
+    cursor_bg     = "#D8DEE9",
+    cursor_border = "#D8DEE9",
+    cursor_fg     = "#242933",
+    selection_fg  = "#D8DEE9",
+    selection_bg  = "#2E3440",
+    ansi = { "#191D24", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#8FBCBB", "#D8DEE9", },
+    brights = { "#3B4252", "#D06F79", "#B1D196", "#F0D399", "#88C0D0", "#C895BF", "#93CCDC", "#E5E9F0", },
+  }
 }
