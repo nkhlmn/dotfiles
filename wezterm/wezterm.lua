@@ -15,7 +15,7 @@ return {
   audible_bell = "Disabled",
   force_reverse_video_cursor = true,
   color_scheme = "Kanagawa (Gogh)",
-  leader = { key = 'q', mods = 'CTRL', timeout_milliseconds = 1000 },
+  leader = { key = ' ', mods = 'ALT', timeout_milliseconds = 1000 },
   keys = require("keys"),
   enable_scroll_bar = true,
 }

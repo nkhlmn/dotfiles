@@ -2,6 +2,12 @@ local wezterm = require("wezterm")
 local action = wezterm.action
 local action_callback = wezterm.action_callback
 return {
+  -- Disable default bindings
+  {
+    key = 'q',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
   -- Open launcers
   { key = 'l', mods = 'CTRL|SHIFT', action = action.ShowLauncherArgs { flags = 'FUZZY|COMMANDS' } },
   {
@@ -23,7 +29,7 @@ return {
   -- Create new workspace
   {
     key = 'n',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action.PromptInputLine {
       description = wezterm.format {
         { Attribute = { Intensity = 'Bold' } },
@@ -44,7 +50,7 @@ return {
   -- Rename workspace
   {
     key = 'r',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action.PromptInputLine {
       description = wezterm.format {
         { Attribute = { Intensity = 'Bold' } },
@@ -65,7 +71,7 @@ return {
   -- Rename tab
   {
     key = 't',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action.PromptInputLine {
       description = wezterm.format {
         { Attribute = { Intensity = 'Bold' } },
@@ -83,12 +89,12 @@ return {
   -- Split pane
   {
     key = 'v',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
   {
     key = 's',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action.SplitVertical { domain = 'CurrentPaneDomain' },
   },
 
@@ -100,36 +106,36 @@ return {
   },
   {
     key = 'w',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action.CloseCurrentPane { confirm = true },
   },
 
   -- Select pane
   {
     key = 'h',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action.ActivatePaneDirection 'Left',
   },
   {
     key = 'l',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action.ActivatePaneDirection 'Right',
   },
   {
     key = 'k',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action.ActivatePaneDirection 'Up',
   },
   {
     key = 'j',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action.ActivatePaneDirection 'Down',
   },
 
   -- Close all other panes
   {
     key = 'o',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action_callback(function(win, pane)
       local tab = win:active_tab()
       for _, p in ipairs(tab:panes()) do
@@ -144,7 +150,7 @@ return {
   -- Zoom pane
   {
     key = 'z',
-    mods = 'LEADER|CTRL',
+    mods = 'LEADER|ALT',
     action = action.TogglePaneZoomState,
   },
 
