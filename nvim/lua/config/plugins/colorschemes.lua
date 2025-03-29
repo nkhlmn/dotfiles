@@ -2,7 +2,7 @@ return {
   {
     'rebelot/kanagawa.nvim',
     opts = {
-      overrides = function (colors)
+      overrides = function(colors)
         local theme = colors.theme
         return {
           -- Borderless Telescope

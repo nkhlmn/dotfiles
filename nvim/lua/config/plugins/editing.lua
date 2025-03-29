@@ -1,9 +1,6 @@
 return {
-	{ 'windwp/nvim-autopairs', config = true },
-
-	{ 'kylechui/nvim-surround', config = true },
-
-	{ 'tpope/vim-repeat' },
-
-	{ 'danymat/neogen', dependencies = 'nvim-treesitter/nvim-treesitter', config = true },
+  { 'windwp/nvim-autopairs', opts = {} },
+  { 'kylechui/nvim-surround', opts = {} },
+  { 'tpope/vim-repeat' },
+  { 'danymat/neogen', dependencies = 'nvim-treesitter/nvim-treesitter', opts = {} },
 }

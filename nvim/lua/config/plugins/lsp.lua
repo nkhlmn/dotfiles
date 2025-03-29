@@ -20,30 +20,28 @@ local on_attach = function(client, buf)
 end
 
 return {
-  {
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      { 'williamboman/mason.nvim', build = ':MasonUpdate' },
-      { 'williamboman/mason-lspconfig.nvim' },
-      { 'saghen/blink.cmp' },
-    },
-    config = function()
-      local default_opts = {
-        on_attach = on_attach,
-        capabilities = require('blink.cmp').get_lsp_capabilities(),
-      }
-
-      -- setup lsp's installed with Mason
-      require('mason').setup()
-      require('mason-lspconfig').setup()
-      require('mason-lspconfig').setup_handlers({
-        function(server_name)
-          require('lspconfig')[server_name].setup(default_opts)
-        end,
-      })
-
-      -- setup lsp's NOT installed with Mason
-      require('lspconfig')['ocamllsp'].setup(default_opts)
-    end,
+  'neovim/nvim-lspconfig',
+  dependencies = {
+    { 'williamboman/mason.nvim', build = ':MasonUpdate' },
+    { 'williamboman/mason-lspconfig.nvim' },
+    { 'saghen/blink.cmp' },
   },
+  config = function()
+    local default_opts = {
+      on_attach = on_attach,
+      capabilities = require('blink.cmp').get_lsp_capabilities(),
+    }
+
+    -- setup lsp's installed with Mason
+    require('mason').setup()
+    require('mason-lspconfig').setup()
+    require('mason-lspconfig').setup_handlers({
+      function(server_name)
+        require('lspconfig')[server_name].setup(default_opts)
+      end,
+    })
+
+    -- setup lsp's NOT installed with Mason
+    require('lspconfig')['ocamllsp'].setup(default_opts)
+  end,
 }

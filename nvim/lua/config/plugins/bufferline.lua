@@ -1,3 +1,5 @@
 return {
-	{ 'akinsho/bufferline.nvim', version = '*', config = true },
+  'akinsho/bufferline.nvim',
+  version = '*',
+  opts = {},
 }
