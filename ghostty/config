@@ -1,4 +1,4 @@
-theme = Kanagawa Dragon
+theme = dark:Kanagawa Dragon,light:neobones_light
 
 # disable ligatures
 font-feature = -calt
