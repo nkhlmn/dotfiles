@@ -1,6 +1,6 @@
 const config = {
-  defaultBrowser: 'Firefox',
-  // defaultBrowser: 'Brave Browser',
+  // defaultBrowser: 'Firefox',
+  defaultBrowser: 'Brave Browser',
   // defaultBrowser: 'Safari',
 
   defaultTerminal: 'WezTerm'
