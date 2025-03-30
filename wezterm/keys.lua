@@ -1,4 +1,4 @@
-local wezterm = require("wezterm")
+local wezterm = require('wezterm')
 local action = wezterm.action
 local action_callback = wezterm.action_callback
 return {

@@ -1,4 +1,4 @@
-local wezterm = require("wezterm")
+local wezterm = require('wezterm')
 
 -- Open default workspaces on gui startup
 wezterm.on('gui-startup', function(cmd)
@@ -31,9 +31,9 @@ end)
 wezterm.on('update-right-status', function(win, pane)
   local tab = win:active_tab()
   local panes_info = tab:panes_with_info()
-  local status = ""
+  local status = ''
   for _, p in ipairs(panes_info) do
-    if p.is_zoomed == true then status = "ZOOMED" end
+    if p.is_zoomed == true then status = 'ZOOMED' end
   end
   win:set_right_status(status)
 end)
