@@ -2,6 +2,7 @@ return {
   'stevearc/conform.nvim',
   opts = {
     formatters_by_ft = {
+      sh = { 'shfmt' },
       javascript = { 'biome', 'prettierd', stop_after_first = true },
       json = { 'biome', 'prettierd', stop_after_first = true },
       markdown = { 'mdformat' },
