@@ -50,8 +50,5 @@ vim.diagnostic.config({
   virtual_text = {
     source = 'if_many',
     virt_text_pos = 'eol_right_align',
-  },
-  virtual_lines = {
-    current_line = true
   }
 })
