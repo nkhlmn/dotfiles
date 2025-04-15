@@ -7,13 +7,12 @@ return {
     config = function()
       local installed_servers = require('mason-lspconfig').get_installed_servers()
       for _, server in ipairs(installed_servers) do
-        local config = require('lspconfig.configs.' .. server)
-        if vim.lsp.config[server] == nil and config ~= nil then
-          vim.lsp.config(server, config.default_config)
+        if vim.lsp.config[server] ~= nil then
+          vim.lsp.enable(server)
+        else
+          require('lspconfig')[server].setup({})
         end
       end
-
-      vim.lsp.enable(installed_servers)
     end
   },
 }
