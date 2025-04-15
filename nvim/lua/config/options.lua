@@ -1,6 +1,7 @@
 -- Define global options
 local global_options = {
   mapleader = ' ',
+  winborder = 'none'
 }
 
 -- Define editor options
@@ -46,6 +47,10 @@ for key, value in pairs(editor_options) do
 end
 
 vim.diagnostic.config({
+  virtual_text = {
+    source = 'if_many',
+    virt_text_pos = 'eol_right_align',
+  },
   virtual_lines = {
     current_line = true
   }

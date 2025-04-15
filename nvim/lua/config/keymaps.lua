@@ -1,13 +1,11 @@
-local utils = require('config.utils')
 
 -- Define global keymaps
 local keymaps = {
   -- misc
-  { '', '<leader>`', ':tabnew $MYVIMRC<CR>' }, -- open init.lua
   { 'n', '<leader>xx', ':w|so%<CR>' }, -- source current file
-  { 'n', '<F5>', ':!open %<CR>' }, -- Open current file with default program
+  { 'n', '<leader>xo', ':!open %<CR>' }, -- Open current file with default program
   { 'n', '<leader>f', require('conform').format },
-  { 'n', '\\d', vim.diagnostic.open_float },
+  { 'n', '<leader>d', vim.diagnostic.open_float },
 
   -- searching
   { 'n', '*', '*N', {} }, -- keep cursor on first match when searching for word under cursor
@@ -21,8 +19,8 @@ local keymaps = {
   { 'n', '<C-s>', ':w<cr>' }, -- write/save buffer
   { 'n', 'ZB', '<cmd>bd!<cr>' }, -- close buffer
   { 'n', '<leader>b', ':enew<CR>' }, -- open new buffer
-  { 'n', '[f', utils.prev_file }, -- open new buffer
-  { 'n', ']f', utils.next_file }, -- open new buffer
+  { 'n', '[f', require('utils').prev_file }, -- open new buffer
+  { 'n', ']f', require('utils').next_file }, -- open new buffer
 
   -- tabs
   { 'n', '<leader>t', ':tabnew<CR>' }, -- open new tab
@@ -50,20 +48,23 @@ local keymaps = {
   { 'i', '?', '?<c-g>u' },
 
   -- Custom functions
-  { 'n', '\\D', utils.toggle_diff },
-  { 'n', '\\w', utils.toggle_whitespace },
+  { 'n', '\\D', require('utils').toggle_diff },
+  { 'n', '\\w', require('utils').toggle_whitespace },
+  { 'n', '\\h', require('utils.lsp').toggle_inlay_hints },
+  { 'n', '\\d', require('utils.diagnostics').toggle_diagnostics },
+  { 'n', '\\v', require('utils.diagnostics').toggle_virtual_lines },
 
   -- plugins
-  -- oil
+  --- oil
   { 'n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' } },
 
-  ---- gitsigns
+  --- gitsigns
   { 'n', '[g', ':Gitsigns nav_hunk prev<CR>' },
   { 'n', ']g', ':Gitsigns nav_hunk next<CR>' },
 
-  ---- telescope (global)
+  --- telescope (global)
   { 'n', '<C-t><C-t>', ':Telescope<cr>' },
-  { 'n', '<leader>p', utils.open_telescope_find_files_with_hidden },
+  { 'n', '<leader>p', require('utils.telescope').open_telescope_find_files_with_hidden },
   { 'n', '<C-g>', require('telescope.builtin').git_status },
   { 'n', '<C-b>', require('telescope.builtin').buffers },
   { 'n', '<C-p>', require('telescope.builtin').find_files },
@@ -84,10 +85,6 @@ local keymaps = {
   { 'n', '<leader>ot', require('telescope.builtin').builtin },
   { 'n', 'gd', require('telescope.builtin').lsp_definitions },
   { 'n', 'gD', require('telescope.builtin').lsp_type_definitions },
-
-  -- misc
-  { 'n', '<leader>d', utils.toggle_diagnostics },
-  { 'n', '\\h', utils.toggle_inlay_hints },
 }
 
 -- Set global keymaps

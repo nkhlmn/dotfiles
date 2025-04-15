@@ -1,17 +1,5 @@
 local M = {}
 
----Get attached lsp server names
-function M.get_attached_lsp_servers()
-  local attached_servers = vim.lsp.get_clients()
-  local server_names = {}
-
-  for _, value in pairs(attached_servers) do
-    table.insert(server_names, value.name)
-  end
-
-  return table.concat(server_names, ' | ')
-end
-
 ---Toggle whitespace
 function M.toggle_whitespace()
   vim.o.list = not vim.o.list
@@ -21,23 +9,6 @@ end
 function M.toggle_diff()
   local action = (vim.o.diff == true and 'off' or 'this')
   vim.cmd('windo diff' .. action)
-end
-
----Toggle diagnostics
-function M.toggle_diagnostics()
-  local is_enabled = vim.diagnostic.is_enabled()
-  vim.diagnostic.enable(not is_enabled)
-end
-
----Toggle inlay hints
-function M.toggle_inlay_hints()
-  local is_enabled = vim.lsp.inlay_hint.is_enabled({})
-  vim.lsp.inlay_hint.enable(not is_enabled)
-end
-
----Open telescope find_files with hidden enabled
-function M.open_telescope_find_files_with_hidden()
-  require('telescope.builtin').find_files({ no_ignore = true, hidden = true })
 end
 
 ---Rebuild dune projects
