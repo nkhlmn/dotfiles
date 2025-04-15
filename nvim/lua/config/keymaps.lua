@@ -79,6 +79,15 @@ local keymaps = {
   { 'n', '<leader>of', require('telescope.builtin').grep_string },
   { 'n', '<leader>o;', require('telescope.builtin').command_history },
   { 'n', '<leader>os', require('telescope.builtin').search_history },
+  { 'n', '<leader>or', require('telescope.builtin').lsp_references },
+  { 'n', '<leader>oi', require('telescope.builtin').lsp_implementations },
+  { 'n', '<leader>ot', require('telescope.builtin').builtin },
+  { 'n', 'gd', require('telescope.builtin').lsp_definitions },
+  { 'n', 'gD', require('telescope.builtin').lsp_type_definitions },
+
+  -- misc
+  { 'n', '<leader>d', utils.toggle_diagnostics },
+  { 'n', '\\h', utils.toggle_inlay_hints },
 }
 
 -- Set global keymaps
@@ -89,22 +98,3 @@ for _, val in pairs(keymaps) do
     vim.notify('Error setting keymaps: ' .. vim.inspect(val), vim.log.levels.ERROR)
   end
 end
-
--- Define lsp keymaps (set in lsp on_attach function)
-local lsp_keymaps = {
-  defaults = {
-    -- telescope (lsp)
-    { 'n', '<leader>or', require('telescope.builtin').lsp_references },
-    { 'n', '<leader>oi', require('telescope.builtin').lsp_implementations },
-    { 'n', 'gd', require('telescope.builtin').lsp_definitions },
-    { 'n', 'gD', require('telescope.builtin').lsp_type_definitions },
-
-    -- misc
-    { 'n', '<leader>d', utils.toggle_diagnostics },
-    { 'n', '\\h', utils.toggle_inlay_hints },
-  },
-}
-
-return {
-  lsp_keymaps = lsp_keymaps,
-}
