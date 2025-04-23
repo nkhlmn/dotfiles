@@ -1,10 +1,8 @@
-
 -- Define global keymaps
 local keymaps = {
   -- misc
   { 'n', '<leader>xx', ':w|so%<CR>' }, -- source current file
   { 'n', '<leader>xo', ':!open %<CR>' }, -- Open current file with default program
-  { 'n', '<leader>f', require('conform').format },
   { 'n', '<leader>d', vim.diagnostic.open_float },
 
   -- searching
@@ -19,8 +17,8 @@ local keymaps = {
   { 'n', '<C-s>', ':w<cr>' }, -- write/save buffer
   { 'n', 'ZB', '<cmd>bd!<cr>' }, -- close buffer
   { 'n', '<leader>b', ':enew<CR>' }, -- open new buffer
-  { 'n', '[f', require('utils').prev_file }, -- open new buffer
-  { 'n', ']f', require('utils').next_file }, -- open new buffer
+  { 'n', '[f', require('utils.fs').prev }, -- open new buffer
+  { 'n', ']f', require('utils.fs').next }, -- open new buffer
 
   -- tabs
   { 'n', '<leader>t', ':tabnew<CR>' }, -- open new tab
@@ -32,20 +30,7 @@ local keymaps = {
   -- yanking
   { 'n', '<leader>y', ':%y<CR>', {} }, -- yank entire buffer
   { 'n', 'Y', 'y$' }, -- Yank till end of line with Y (instead of yanking entire line)
-  { 'n', 'y^', 'mzy^`z' }, -- Leave cursor where it is after yanking
-  { 'n', 'ygg', 'mzygg`z' }, -- Leave cursor where it is after yanking
-  { 'n', ',p', '"0p', { silent = true } }, -- Paste (after cursor) last thing yanked
-  { 'n', ',P', '"0P', { silent = true } }, -- Paste (before cursor) last thing yanked
-
-  -- macros
-  { 'n', 'Q', '@@j', {} }, -- yank entire buffer
-  { 'x', 'Q', ':norm @@<CR>', {} }, -- run last run macro on all visually selected lines
-
-  -- Create undo break points when hitting certain characters in insert mode (allows for more granular undos)
-  { 'i', ',', ',<c-g>u' },
-  { 'i', '.', '.<c-g>u' },
-  { 'i', '!', '!<c-g>u' },
-  { 'i', '?', '?<c-g>u' },
+  -- { 'n', 'y^', 'mzy^`z' }, -- Leave cursor where it is after yanking
 
   -- Custom functions
   { 'n', '\\D', require('utils').toggle_diff },
@@ -53,38 +38,6 @@ local keymaps = {
   { 'n', '\\h', require('utils.lsp').toggle_inlay_hints },
   { 'n', '\\d', require('utils.diagnostics').toggle_diagnostics },
   { 'n', '\\v', require('utils.diagnostics').toggle_virtual_lines },
-
-  -- plugins
-  --- oil
-  { 'n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' } },
-
-  --- gitsigns
-  { 'n', '[g', ':Gitsigns nav_hunk prev<CR>' },
-  { 'n', ']g', ':Gitsigns nav_hunk next<CR>' },
-
-  --- telescope (global)
-  { 'n', '<C-t><C-t>', ':Telescope<cr>' },
-  { 'n', '<leader>p', require('utils.telescope').open_telescope_find_files_with_hidden },
-  { 'n', '<C-g>', require('telescope.builtin').git_status },
-  { 'n', '<C-b>', require('telescope.builtin').buffers },
-  { 'n', '<C-p>', require('telescope.builtin').find_files },
-  { 'n', '<C-f>', require('telescope.builtin').live_grep },
-  { 'n', '<C-h>', require('telescope.builtin').help_tags },
-  { 'n', '<leader>ok', require('telescope.builtin').keymaps },
-  { 'n', '<leader>oc', require('telescope.builtin').colorscheme },
-  { 'n', '<leader>ol', require('telescope.builtin').loclist },
-  { 'n', '<leader>oq', require('telescope.builtin').quickfix },
-  { 'n', '<leader>oo', require('telescope.builtin').vim_options },
-  { 'n', '<leader>oh', require('telescope.builtin').highlights },
-  { 'n', '<leader>od', require('telescope.builtin').diagnostics },
-  { 'n', '<leader>of', require('telescope.builtin').grep_string },
-  { 'n', '<leader>o;', require('telescope.builtin').command_history },
-  { 'n', '<leader>os', require('telescope.builtin').search_history },
-  { 'n', '<leader>or', require('telescope.builtin').lsp_references },
-  { 'n', '<leader>oi', require('telescope.builtin').lsp_implementations },
-  { 'n', '<leader>ot', require('telescope.builtin').builtin },
-  { 'n', 'gd', require('telescope.builtin').lsp_definitions },
-  { 'n', 'gD', require('telescope.builtin').lsp_type_definitions },
 }
 
 -- Set global keymaps

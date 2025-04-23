@@ -18,4 +18,7 @@ return {
       ['q'] = { 'actions.close', mode = 'n' },
     },
   },
+  keys = {
+    { '-', '<CMD>Oil<CR>' },
+  }
 }

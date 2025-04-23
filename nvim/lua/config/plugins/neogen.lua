@@ -1,3 +1,5 @@
 return {
-  'danymat/neogen', dependencies = 'nvim-treesitter/nvim-treesitter', opts = {},
+  'danymat/neogen',
+  dependencies = 'nvim-treesitter/nvim-treesitter',
+  opts = {},
 }
