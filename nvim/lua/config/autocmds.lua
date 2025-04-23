@@ -32,6 +32,6 @@ vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
   pattern = '*.ml',
   -- desc = 'Trigger `dune build` after saving .ml files',
   callback = function()
-    require('config.utils').dune_rebuild()
+    require('utils').dune_rebuild()
   end,
 })
