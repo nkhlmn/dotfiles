@@ -11,9 +11,9 @@ return {
   adjust_window_size_when_changing_font_size = false,
   audible_bell = 'Disabled',
   force_reverse_video_cursor = true,
-  -- color_schemes = require("color_schemes"),
-  -- color_scheme = "kanagawa-dragon",
-  color_scheme = 'Kanagawa Dragon (Gogh)',
+  color_schemes = require("color_schemes"),
+  color_scheme = "kanagawa-dragon",
+  -- color_scheme = 'Kanagawa Dragon (Gogh)', -- built-in; currently requires nightly
   leader = { key = ' ', mods = 'ALT', timeout_milliseconds = 1000 },
   keys = require('keys'),
   enable_scroll_bar = true,
