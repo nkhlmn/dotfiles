@@ -1,0 +1,4 @@
+return {
+  mapleader = ' ',
+  winborder = 'none'
+}

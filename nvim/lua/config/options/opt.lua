@@ -1,11 +1,4 @@
--- Define global options
-local global_options = {
-  mapleader = ' ',
-  winborder = 'none'
-}
-
--- Define editor options
-local editor_options = {
+return {
   completeopt = 'menu,menuone,noselect',
   number = true,
   signcolumn = 'yes',
@@ -35,20 +28,3 @@ local editor_options = {
   foldmethod = 'indent',
   mousescroll = 'ver:1,hor:6',
 }
-
--- Set global options defined above
-for key, value in pairs(global_options) do
-  vim.g[key] = value
-end
-
--- Set editor options defined above
-for key, value in pairs(editor_options) do
-  vim.o[key] = value
-end
-
-vim.diagnostic.config({
-  virtual_text = {
-    source = 'if_many',
-    virt_text_pos = 'eol_right_align',
-  }
-})
