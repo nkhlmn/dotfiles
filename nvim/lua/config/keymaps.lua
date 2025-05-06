@@ -33,11 +33,11 @@ local keymaps = {
   -- { 'n', 'y^', 'mzy^`z' }, -- Leave cursor where it is after yanking
 
   -- Custom functions
-  { 'n', '\\D', require('utils').toggle_diff },
-  { 'n', '\\w', require('utils').toggle_whitespace },
-  { 'n', '\\h', require('utils.lsp').toggle_inlay_hints },
-  { 'n', '\\d', require('utils.diagnostics').toggle_diagnostics },
-  { 'n', '\\v', require('utils.diagnostics').toggle_virtual_lines },
+  { 'n', '\\D', require('utils.toggle').diff },
+  { 'n', '\\w', require('utils.toggle').whitespace },
+  { 'n', '\\h', require('utils.toggle').inlay_hints },
+  { 'n', '\\d', require('utils.toggle').diagnostics },
+  { 'n', '\\v', require('utils.toggle').virtual_lines },
 }
 
 -- Set global keymaps

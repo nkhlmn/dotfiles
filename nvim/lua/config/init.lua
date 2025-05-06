@@ -1,0 +1,7 @@
+pcall(require, 'config.local')
+require('config.options')
+require('config.lazy')
+require('config.colorscheme')
+require('config.keymaps')
+require('config.autocmds')
+require('config.filetype')
