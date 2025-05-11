@@ -4,8 +4,7 @@ undo/
 swap/
 pack/
 plugged/
-packer_compiled.lua
 .venv/
 .netrwhist
-lua/config/local.lua
+local.lua
 Session.vim
