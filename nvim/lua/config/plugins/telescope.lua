@@ -22,7 +22,6 @@ return {
     telescope.load_extension('gore')
   end,
   keys = {
-    { '<C-t><C-t>', ':Telescope<cr>' },
     { '<leader>p', function() require('telescope.builtin').find_files({ no_ignore = true, hidden = true }) end },
     { '<C-g>', require('telescope.builtin').git_status },
     { '<C-b>', require('telescope.builtin').buffers },
