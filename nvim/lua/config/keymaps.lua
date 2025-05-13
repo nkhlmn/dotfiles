@@ -32,12 +32,13 @@ local keymaps = {
   { 'n', 'Y', 'y$' }, -- Yank till end of line with Y (instead of yanking entire line)
   -- { 'n', 'y^', 'mzy^`z' }, -- Leave cursor where it is after yanking
 
-  -- Custom functions
-  { 'n', '\\D', require('utils.toggle').diff },
-  { 'n', '\\w', require('utils.toggle').whitespace },
-  { 'n', '\\h', require('utils.toggle').inlay_hints },
-  { 'n', '\\d', require('utils.toggle').diagnostics },
-  { 'n', '\\v', require('utils.toggle').virtual_lines },
+  -- Custom
+  { 'n', '\\D', require('utils.toggle').features.diff },
+  { 'n', '\\w', require('utils.toggle').features.whitespace },
+  { 'n', '\\h', require('utils.toggle').features.inlay_hints },
+  { 'n', '\\d', require('utils.toggle').features.diagnostics },
+  { 'n', '\\v', require('utils.toggle').features.virtual_lines },
+  { 'n', '<C-t>', require('utils.toggle').select },
 }
 
 -- Set global keymaps
