@@ -9,7 +9,8 @@ return {
     local telescope = require('telescope')
     telescope.setup({
       defaults = {
-        layout_config = { prompt_position = 'top' },
+        layout_strategy = 'vertical',
+        layout_config = { prompt_position = 'top', width = { padding = 0 }, height = { padding = 0 }, mirror = true },
         sorting_strategy = 'ascending',
         mappings = {
           n = {
