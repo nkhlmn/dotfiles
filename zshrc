@@ -13,12 +13,12 @@ if type brew &>/dev/null; then
   source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-  # The plugin will auto execute this zvm_after_init function
+  # zsh-vi-mode will execute this after initializing
   function zvm_after_init() {
-    source $(brew --prefix)/opt/sk/share/zsh/site-functions/key-bindings.zsh
-    source $(brew --prefix)/opt/sk/share/zsh/site-functions/completion.zsh
+    source <(fzf --zsh) # Set up fzf key bindings and fuzzy completion
   }
 fi
+
 
 # opam configuration
 [[ ! -r /Users/nkhl/.opam/opam-init/init.zsh ]] || source /Users/nkhl/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
