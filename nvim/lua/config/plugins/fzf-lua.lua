@@ -15,14 +15,13 @@ return {
   'ibhagwan/fzf-lua',
   lazy = false,
   opts = { 'borderless'
-    -- , fzf_bin = 'sk',
   },
   keys = {
     { '<leader>p', function() fullscreen_picker('files') end },
     { '<C-g>', function() fullscreen_picker('git_status') end },
     { '<C-b>', function() fullscreen_picker('buffers') end },
     { '<C-p>', function() fullscreen_picker('files', { hidden = false }) end },
-    { '<C-f>', function() fullscreen_picker('live_grep', { resume = true }) end },
+    { '<C-f>', function() fullscreen_picker('grep', { resume = true }) end },
     { '<C-h>', function() fullscreen_picker('helptags', { resume = true }) end },
     { '<leader>ok', function() fullscreen_picker('keymaps', { resume = true }) end },
     { '<leader>oc', function() picker('colorschemes') end },
