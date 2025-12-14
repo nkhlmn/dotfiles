@@ -23,3 +23,4 @@ fi
 # opam configuration
 [[ ! -r /Users/nkhl/.opam/opam-init/init.zsh ]] || source /Users/nkhl/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
+eval "$(mise activate zsh)"
