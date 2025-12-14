@@ -17,8 +17,8 @@ keybind = opt+space>opt+j=goto_split:bottom
 keybind = opt+space>opt+h=goto_split:left
 keybind = opt+space>opt+l=goto_split:right
 
-keybind = opt+space>opt+space=toggle_quick_terminal
-keybind = global:shift+opt+space=toggle_quick_terminal
+keybind = global:super+shift+space=toggle_quick_terminal
+keybind = global:ctrl+super+space=toggle_visibility
 
 keybind = opt+space>opt+w=close_window
 
