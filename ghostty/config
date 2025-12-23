@@ -17,15 +17,17 @@ keybind = opt+space>opt+j=goto_split:bottom
 keybind = opt+space>opt+h=goto_split:left
 keybind = opt+space>opt+l=goto_split:right
 
-keybind = global:super+shift+space=toggle_quick_terminal
-keybind = global:ctrl+super+space=toggle_visibility
-
-keybind = opt+space>opt+w=close_window
-
+keybind = super+shift+k=goto_split:top
+keybind = super+shift+j=goto_split:bottom
+keybind = super+shift+h=goto_split:left
+keybind = super+shift+l=goto_split:right
 
 keybind = ctrl+shift+h=resize_split:left,10
 keybind = ctrl+shift+l=resize_split:right,10
 keybind = ctrl+shift+k=resize_split:up,10
 keybind = ctrl+shift+j=resize_split:down,10
 keybind = ctrl+shift+equal=equalize_splits
+
+keybind = global:super+shift+space=toggle_quick_terminal
+keybind = global:ctrl+super+space=toggle_visibility
 
