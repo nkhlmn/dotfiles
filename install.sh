@@ -8,7 +8,6 @@ SYMLINKS=(
 	"$HOME/dotfiles/wezterm $HOME/.config/wezterm"
 	"$HOME/dotfiles/ghostty $HOME/.config/ghostty"
 	"$HOME/dotfiles/alacritty $HOME/.config/alacritty"
-	"$HOME/dotfiles/phoenix $HOME/.config/phoenix"
 	"$HOME/dotfiles/nvim $HOME/.config/nvim"
 	"$HOME/dotfiles/starship.toml $HOME/.config/starship.toml"
 )
