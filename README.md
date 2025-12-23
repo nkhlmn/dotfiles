@@ -1,9 +1,8 @@
 # Installation
 
-
 ```sh
-# Clone repo
-git clone git@github.com:nkhlmn/dotfiles.git ~/dotfiles
+# Clone repo (insert url from wherever this was cloned)
+git clone <url> ~/dotfiles
 
 # Setup symlinks with install script
 ~/dotfiles/install.sh
