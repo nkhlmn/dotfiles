@@ -1,3 +1,6 @@
+fish_add_path "/opt/homebrew/bin/"
+fish_add_path "/opt/homebrew/sbin"
+
 source ~/.aliases
 source "$HOME/.cargo/env.fish"
 
