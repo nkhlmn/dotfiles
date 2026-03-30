@@ -5,6 +5,8 @@ source ~/.aliases
 source "$HOME/.cargo/env.fish"
 
 set -g fish_key_bindings fish_vi_key_bindings
+bind -M insert ctrl-n down-or-search
+bind -M insert ctrl-p up-or-search
 
 set -gx HOMEBREW_NO_ANALYTICS 1
 
