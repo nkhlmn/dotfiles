@@ -1,4 +1,3 @@
--- Define global keymaps
 local keymaps = {
   -- misc
   { 'n', '<leader>xx', ':w|so%<CR>' }, -- source current file
@@ -17,8 +16,8 @@ local keymaps = {
   { 'n', '<C-s>', ':w<cr>' }, -- write/save buffer
   { 'n', 'ZB', '<cmd>bd!<cr>' }, -- close buffer
   { 'n', '<leader>b', ':enew<CR>' }, -- open new buffer
-  { 'n', '[f', require('utils.fs').prev }, -- open new buffer
-  { 'n', ']f', require('utils.fs').next }, -- open new buffer
+  { 'n', '[f', require('utils.fs').prev }, -- open prev file
+  { 'n', ']f', require('utils.fs').next }, -- open next file
 
   -- tabs
   { 'n', '<leader>t', ':tabnew<CR>' }, -- open new tab
@@ -30,7 +29,6 @@ local keymaps = {
   -- yanking
   { 'n', '<leader>y', ':%y<CR>', {} }, -- yank entire buffer
   { 'n', 'Y', 'y$' }, -- Yank till end of line with Y (instead of yanking entire line)
-  -- { 'n', 'y^', 'mzy^`z' }, -- Leave cursor where it is after yanking
 
   -- Custom
   { 'n', '\\D', require('utils.toggle').features.diff },
@@ -41,7 +39,6 @@ local keymaps = {
   { 'n', '<C-t>', require('utils.toggle').select },
 }
 
--- Set global keymaps
 local default_options = { noremap = true, silent = true }
 for _, val in pairs(keymaps) do
   local success, _ = pcall(vim.keymap.set, val[1], val[2], val[3], val[4] or default_options)

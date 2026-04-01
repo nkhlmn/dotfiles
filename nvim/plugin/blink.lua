@@ -1,15 +1,12 @@
-return {
-  'saghen/blink.cmp',
-  dependencies = {
-    'rafamadriz/friendly-snippets',
-    'folke/lazydev.nvim',
-    'kristijanhusak/vim-dadbod-completion',
-  },
-  version = '1.*',
+vim.pack.add({
+  {
+    src = 'https://github.com/Saghen/blink.cmp',
+    version = vim.version.range('1.*'),
+  }
+})
 
-  ---@module 'blink.cmp'
-  ---@type blink.cmp.Config
-  opts = {
+require('blink.cmp').setup(
+  {
     sources = {
       default = { 'lsp', 'path', 'snippets', 'buffer' },
       per_filetype = {
@@ -29,7 +26,5 @@ return {
       },
     },
     signature = { enabled = true },
-  },
-
-  opts_extend = { 'sources.default' },
-}
+  }
+)

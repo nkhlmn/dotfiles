@@ -35,3 +35,18 @@ vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
     require('utils.ocaml').dune_rebuild()
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { '<filetype>' },
+  callback = function()
+    -- -- folding
+    vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+    vim.wo[0][0].foldmethod = 'expr'
+
+    -- -- indenting
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
+    -- highlighting
+    vim.treesitter.start()
+  end,
+})
