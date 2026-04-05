@@ -12,6 +12,8 @@ set -gx HOMEBREW_NO_ANALYTICS 1
 
 set -gx EDITOR nvim
 
+set -gx MANPAGER 'nvim +Man!'
+
 starship init fish | source
 
 fzf --fish | source
