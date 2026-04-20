@@ -36,3 +36,9 @@ vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
   end,
 })
 
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function()
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
+  end
+})
